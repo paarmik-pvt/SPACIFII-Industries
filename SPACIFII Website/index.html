@@ -145,7 +145,7 @@
         footer {
             padding: 20px 40px;
             background-color: #000000;
-            color: #ffffff; /* Lighter gray for elegance */
+            color: #bbbbbb; /* Lighter gray for elegance */
             font-size: 0.9em;
             font-weight: 400;
             display: flex;
@@ -166,21 +166,23 @@
         }
     
         footer a {
-            color: #bbbbbb;
+            color: #636363;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        body.light-mode footer a {
-            color: #666666;
+        footer a {
+            display: inline-block; /* Required for transform to work */
+            transition: color 0.3s ease, transform 0.3s ease; /* Added transform to transition */
         }
-    
+
         footer a:hover {
-            color: #000000;
+            transform: scale(1.05); /* Subtle zoom effect */
+            color: #aeadad; /* Keep your existing hover color */
         }
 
         body.light-mode footer a:hover {
-            color: #1a1a1a;
+            color: #1a1a1a; /* Keep your existing light mode hover color */
         }
     
         footer img {
@@ -573,12 +575,12 @@
         <b class="xtra-large-text">SPACIFII</b>
     </main>
 
-    <footer>
+    <footer id="section3">
+        <canvas id="footer-particles"></canvas>
         <span>© 2025 SPACIFII Industries. All Rights Reserved.</span>
         <a href="mailto:spacifii.industries@gmail.com">Email Us</a>
         <a href="https://t.me/SPACIFIIIndustries" target="_blank">
             Telegram <img src="../Images/Black Telegram Logo.webp" alt="Telegram Logo">
-        </a>
     </footer>
 
     <script>
